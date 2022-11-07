@@ -20,11 +20,6 @@ allow-lan: false
 # "[aaaa::a8aa:ff:fe09:57d8]": bind a single IPv6 address
 bind-address: '*'
 #--------------------------------------------------------------------------------------#
-# Clash router working mode
-# rule: rule-based packet routing
-# global: all packets will be forwarded to a single endpoint
-# direct: directly forward the packets to the Internet
-mode: rule
 # Clash by default prints logs to STDOUT
 # info / warning / error / debug / silent
 log-level: info
@@ -33,6 +28,13 @@ external-controller: 127.0.0.1:9090
 #--------------------------------------------------------------------------------------#
 # When set to false, resolver won't translate hostnames to IPv6 addresses
 ipv6: false
+# Clash router working mode
+# rule: rule-based packet routing
+# global: all packets will be forwarded to a single endpoint
+# direct: directly forward the packets to the Internet
+mode: rule
+# [Meta Feature]
+tcp-concurrent: true
 #--------------------------------------------------------------------------------------#
 # DNS server settings
 # This section is optional. When not present, the DNS server will be disabled.
