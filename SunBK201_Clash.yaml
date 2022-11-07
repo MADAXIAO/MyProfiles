@@ -272,7 +272,7 @@ rule-providers:
     interval: 86400
   Advertising:
     type: http
-    behavior: classical
+    behavior: domain
     path: ./RuleSet/Advertising.yaml
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising_Domain.yaml
     interval: 86400
