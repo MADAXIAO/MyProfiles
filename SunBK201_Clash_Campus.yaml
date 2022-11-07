@@ -164,6 +164,9 @@ proxy-groups:
     interval: 300
 #--------------------------------------------------------------------------------------#
 rules:
+  # UA
+  - DST-PORT,80,Switch
+  - DST-PORT,8080,Switch
   # Personal Define
   - DOMAIN,speed.cloudflare.com,CN
   - DOMAIN-SUFFIX,test-ipv6.com,CN
