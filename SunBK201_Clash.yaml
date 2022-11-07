@@ -124,35 +124,35 @@ proxy-groups:
     interval: 300
   - name: "HongKong"
     type: select
-    filter: (香港|Hong Kong|HK)(?:.*Premium)
+    filter: '^(?!.*?(Premium)).*(香港|Hong Kong|HK)'
     use:
       - Global-ISP
     url: http://1.1.1.1/generate_204
     interval: 300
   - name: "Taiwan"
     type: select
-    filter: (台湾|Taiwan|TW)(?:.*Premium)
+    filter: '^(?!.*?(Premium)).*(台湾|Taiwan|TW)'
     use:
       - Global-ISP
     url: http://1.1.1.1/generate_204
     interval: 300
   - name: "Singapore"
     type: select
-    filter: (新加坡|Singapore|SG)(?:.*Premium)
+    filter: '^(?!.*?(Premium)).*(新加坡|Singapore|SG)'
     use:
       - Global-ISP
     url: http://1.1.1.1/generate_204
     interval: 300
   - name: "Japan"
     type: select
-    filter: (日本|Japan|JP)(?:.*Premium)
+    filter: '^(?!.*?(Premium)).*(日本|Japan|JP)'
     use:
       - Global-ISP
     url: http://1.1.1.1/generate_204
     interval: 300
   - name: "USA"
     type: select
-    filter: (美国|USA|US)(?:.*Premium)
+    filter: '^(?!.*?(Premium)).*(美国|USA|US)'
     use:
       - Global-ISP
     url: http://1.1.1.1/generate_204
