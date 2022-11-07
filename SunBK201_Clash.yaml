@@ -69,46 +69,6 @@ proxy-providers:
       enable: true
       interval: 600
       url: http://1.1.1.1/generate_204
-  HongKong:
-    type: file
-    path: "./Proxy-Providers/Global-ISP.yaml"
-    filter: (香港|Hong Kong|HK)(?:.*Premium)
-    health-check:
-      enable: true
-      url: http://1.1.1.1/generate_204
-      interval: 300
-  Taiwan:
-    type: file
-    path: "./Proxy-Providers/Global-ISP.yaml"
-    filter: (台湾|Taiwan|TW)(?:.*Premium)
-    health-check:
-      enable: true
-      url: http://1.1.1.1/generate_204
-      interval: 300
-  Singapore:
-    type: file
-    path: "./Proxy-Providers/Global-ISP.yaml"
-    filter: (新加坡|Singapore|SG)(?:.*Premium)
-    health-check:
-      enable: true
-      url: http://1.1.1.1/generate_204
-      interval: 300
-  Japan:
-    type: file
-    path: "./Proxy-Providers/Global-ISP.yaml"
-    filter: (日本|Japan|JP)(?:.*Premium)
-    health-check:
-      enable: true
-      url: http://1.1.1.1/generate_204
-      interval: 300
-  USA:
-    type: file
-    path: "./Proxy-Providers/Global-ISP.yaml"
-    filter: (美国|USA|US)(?:.*Premium)
-    health-check:
-      enable: true
-      url: http://1.1.1.1/generate_204
-      interval: 300
 #--------------------------------------------------------------------------------------#
 proxy-groups:
   - name: "Switch"
@@ -164,32 +124,37 @@ proxy-groups:
     interval: 300
   - name: "HongKong"
     type: select
+    filter: (香港|Hong Kong|HK)(?:.*Premium)
     use:
-      - HongKong
+      - Global-ISP
     url: http://1.1.1.1/generate_204
     interval: 300
   - name: "Taiwan"
     type: select
+    filter: (台湾|Taiwan|TW)(?:.*Premium)
     use:
-      - Taiwan
+      - Global-ISP
     url: http://1.1.1.1/generate_204
     interval: 300
   - name: "Singapore"
     type: select
+    filter: (新加坡|Singapore|SG)(?:.*Premium)
     use:
-      - Singapore
+      - Global-ISP
     url: http://1.1.1.1/generate_204
     interval: 300
   - name: "Japan"
     type: select
+    filter: (日本|Japan|JP)(?:.*Premium)
     use:
-      - Japan
+      - Global-ISP
     url: http://1.1.1.1/generate_204
     interval: 300
   - name: "USA"
     type: select
+    filter: (美国|USA|US)(?:.*Premium)
     use:
-      - USA
+      - Global-ISP
     url: http://1.1.1.1/generate_204
     interval: 300
 #--------------------------------------------------------------------------------------#
