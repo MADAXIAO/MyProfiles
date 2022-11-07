@@ -200,7 +200,7 @@ rules:
   # Unbreak
   - RULE-SET,Unbreak,CN
   # Advertising & Hijacking & Privacy
-  - DOMAIN-SUFFIX,loli.net,CN // SM.MS
+  - DOMAIN-SUFFIX,loli.net,CN # SM.MS
   - DOMAIN,click.simba.taobao.com,CN # Web Recommend
   - RULE-SET,Advertising,REJECT
   - RULE-SET,Advertising-antiAD,REJECT
