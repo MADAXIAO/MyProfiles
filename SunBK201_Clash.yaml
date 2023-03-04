@@ -67,7 +67,7 @@ proxies:
 proxy-providers:
   Global-ISP:
     type: http
-    url: ""
+    url: "https://dy.zou666.xyz/api/v1/client/subscribe?token=4daa3c27c9056c0a1b2a77b408b699de"
     interval: 3600
     path: "./Proxy-Providers/Global-ISP.yaml"
     health-check:
